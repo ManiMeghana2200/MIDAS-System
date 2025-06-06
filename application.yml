@@ -1,0 +1,26 @@
+general:
+  kafka-topic: test-topic
+  kafka-topic-transactions: transactions
+
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    properties:
+      allow.auto.create.topics: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
