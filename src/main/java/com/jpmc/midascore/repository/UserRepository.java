@@ -8,4 +8,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<UserRecord, Long> {
     Optional<UserRecord> findById(long id);
+    Optional<UserRecord> findByName(String name);
 }

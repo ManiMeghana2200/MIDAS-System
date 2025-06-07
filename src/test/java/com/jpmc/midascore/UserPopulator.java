@@ -23,5 +23,8 @@ public class UserPopulator {
             UserRecord user = new UserRecord(userData[0], BigDecimal.valueOf(Double.parseDouble(userData[1])));
             databaseConduit.save(user);
         }
+        
+        databaseConduit.printWilburBalance();
+
     }
 }
