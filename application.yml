@@ -4,6 +4,7 @@ general:
 
 spring:
   kafka:
+    bootstrap-servers: localhost:9092
     consumer:
       auto-offset-reset: earliest
     producer:
@@ -24,3 +25,6 @@ spring:
   h2:
     console:
       enabled: true
+  server:
+    port:33400
+
